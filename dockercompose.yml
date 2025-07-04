@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: financial_analysis_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: financial_analysis
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: your_secure_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-scripts:/docker-entrypoint-initdb.d
+    networks:
+      - financial_network
+
+volumes:
+  postgres_data:
+
+networks:
+  financial_network:
+    driver: bridge
