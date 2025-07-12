@@ -8,7 +8,8 @@ dependencies = [
     "fastapi[standard]>=0.115.14",
     "pandas>=2.3.0",
     "pre-commit>=4.2.0",
-    "psycopg2>=2.9.10",
+    "psycopg2-binary>=2.9.10",
     "requests>=2.32.4",
     "sqlalchemy>=2.0.41",
+    "yfinance>=0.2.65",
 ]
