@@ -41,19 +41,6 @@ class Config:
         """Get the database connection URL with secret password."""
         return cls.DATABASE_CONNECTION_STRING.get_secret_value()
 
-    @classmethod
-    def get_secret(cls, secret_name: str) -> Optional[str]:
-        """Get a secret value by name."""
-        secret_map = {
-            "alpha_vantage_api": cls.ALPHA_VANTAGE_API_KEY,
-            "yahoo_finance_api": cls.YAHOO_FINANCE_API_KEY,
-            "database_password": cls.DATABASE_PASSWORD,
-            "secret_key": cls.SECRET_KEY,
-            "jwt_secret": cls.JWT_SECRET_KEY,
-            "encryption_key": cls.ENCRYPTION_KEY,
-        }
-        secret = secret_map.get(secret_name.lower())
-        return secret.get_secret_value() if secret else None
 
 
 @lru_cache(maxsize=1)
