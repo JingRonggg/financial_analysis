@@ -1,6 +1,8 @@
-from sqlalchemy.orm import DeclarativeBase
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
+from sqlalchemy import Integer
 
 
 class Base(DeclarativeBase):
-    pass
+    """Base model class for all database entities."""
 
+    pass
