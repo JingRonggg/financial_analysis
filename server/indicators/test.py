@@ -1,6 +1,6 @@
 from server.scripts.data_loading import load_data_from_db
 from server.indicators.rsi_indicator import get_rsi_function
-from server.indicators._indicator import get_EMA
+from server.indicators.EMA_indicator import get_EMA
 from server.indicators.SMA_indicator import get_SMA
 import plotly.graph_objects as go
 import matplotlib.pyplot as plt
