@@ -1,15 +1,28 @@
 from server.scripts.data_loading import load_data_from_db
-from server.indicators.rsi_indicator import get_rsi_function
-from server.indicators.EMA_indicator import get_EMA
-from server.indicators.SMA_indicator import get_SMA
+from server.indicators.RSI import RSI
+from server.indicators.EMA import EMA
+from server.indicators.SMA import SMA
+from server.indicators.BollingerBands import BollingerBands
 import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 import mplfinance as mpf
 import pandas as pd
 
 db_data = load_data_from_db("AAPL", "daily")
-print(get_EMA(db_data, 9, 50))
-print(get_SMA(db_data, 9, 50))
+# stock_sma = SMA(db_data, [9, 20])
+# print(stock_sma.run())
+
+# stock_ema = EMA(db_data, [9, 20])
+# print(stock_ema.run())
+
+stock_rsi = RSI(db_data, 14)
+print(stock_rsi.run())
+stock_rsi.plot()
+
+# stock_bb = BollingerBands(db_data, 14)
+# print(stock_bb.run())
+
+
 
 # stock = get_rsi_function(db_data)
 
