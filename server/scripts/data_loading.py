@@ -219,16 +219,19 @@ async def run_data_loading():
     except Exception as e:
         print(f"Error during data loading: {e}")
 
-def load_data_from_db(stock, interval):
+def load_data_from_db(stock: str, interval: str)-> pd.DataFrame:
     """ fetch daily/hour data for stocks from database"""
     engine = create_database_connection()
 
     try:
         if interval == "daily":
             query = text("SELECT date, open, close, high, low, volume FROM daily_ticker_data WHERE ticker_symbol = :stock")
+        elif interval == "hourly":
+            query = text("SELECT date, open, close, high, low, volume FROM hourly_ticker_data WHERE ticker_symbol = :stock")
         else:
-            query = text("SELECT * FROM hourly_ticker_data WHERE ticker_symbol = :stock")
-            
+            print(f"Error: Invalid interval '{interval}'. Must be 'daily' or 'hourly'.")
+            return result_df
+        
         with engine.connect() as conn:
             result_df  = pd.read_sql_query(query, conn, params={"stock": stock})
 
