@@ -1,12 +1,17 @@
 import './App.css'
-import TickerList from './Services/tickerService'
+import Home from './Pages/Home'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <div>
-      <h1> Ticker List</h1>
-      <TickerList/>
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/ticker/:ticker"/>
+        </Routes>
+      </div>
+    </Router>
   )
 }
 
