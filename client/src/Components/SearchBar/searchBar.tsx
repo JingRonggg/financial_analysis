@@ -13,6 +13,7 @@ export default function searchBar(props: searchBarProps) {
 
     if (loading) return <p>Loading tickers...</p>;
     if (error) return <p>Error: {error}</p>;
+    
     return(
         <div>
             <input ref={inputRef} placeholder={props.placeHolder} onFocus={props.onFocus} onBlur={props.onBlur}></input>
