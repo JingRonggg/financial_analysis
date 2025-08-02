@@ -1,4 +1,4 @@
-import SearchBar from "../Components/SearchBar/searchBar";
+import SearchBar from "../../Components/SearchBar/searchBar";
 import React, { useState } from "react";
 import './home.css'
 

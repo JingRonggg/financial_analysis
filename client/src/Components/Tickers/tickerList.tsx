@@ -7,6 +7,7 @@ export function useTicker() {
     const [ loading, setLoading ] = useState<boolean>(true);
 
     useEffect(() =>{   
+        console.log("Fetching tickers");
         getTickers()
         .then(setTickers)
         .catch(err => setError(err.message || "Error fetching tickers"))

@@ -26,7 +26,6 @@ input:focus::placeholder {
 }
 
 .dropdown {
-  display: none;
   position: absolute;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -40,8 +39,4 @@ input:focus::placeholder {
   list-style: none;
   left: 50%;
   transform: translateX(-50%);
-}
-
-input:focus+ .dropdown {
-  display: block;
 }
