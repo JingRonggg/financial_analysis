@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className={`container ${isFocused ? "darken" : ""}`}>
         <div className="content">
-            <h1>The Project</h1>
+            <h1>Baby Bluee</h1>
             <SearchBar placeHolder="Search tickers here..." 
               onFocus={() => setFocus(true)}
               onBlur={()=> setFocus(false)}

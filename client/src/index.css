@@ -23,9 +23,13 @@
   --color-interactive: 160, 160, 160;
   --circle-size: 80%; /* increased from 120% */
   --blending: hard-light;
+
+  --background-image: url('../photo_2025-08-03_00-29-54.jpg');
 }
 
 body {
+  background: var(--background-image);
+  background-size: 50% auto;
   margin: 0;
   display: flex;
   place-items: center;
