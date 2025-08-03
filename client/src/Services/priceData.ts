@@ -1,17 +1,3 @@
-import { useEffect } from "react";
-import axios from 'axios';
-
-export const getTicker = () => {
-  useEffect(() => {
-
-    axios.get('http://localhost:8000/ticker/')
-    .then
-  }, []);
-}
-
-
-
-
 export const priceData = [
   {
     time: '2018-10-19',
