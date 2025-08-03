@@ -1,5 +1,5 @@
 import './App.css'
-// import ChartArea from './Components/Charts/tickerChart'
+import Dashboard from './Components/dashboard'
 import Home from './Pages/HomePage/Home'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -9,7 +9,7 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Home/>} />
-          {/* <Route path="/ticker/:ticker" element={<ChartArea/>}/> */}
+          <Route path="/ticker/:ticker" element={<Dashboard/>}/>
         </Routes>
       </div>
     </Router>

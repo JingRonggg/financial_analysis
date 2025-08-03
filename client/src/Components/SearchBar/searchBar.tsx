@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react'
-import './searchBar.css'
+import { useRef, useState } from 'react'
+import '../../Styles/searchBar.css'
 import { useTicker } from '../Tickers/tickerList';
 import { Link, useNavigate } from 'react-router-dom';
 

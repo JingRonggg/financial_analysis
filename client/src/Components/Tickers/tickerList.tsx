@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { getTickers } from '../../Services/tickerService'
 
 export function useTicker() {
