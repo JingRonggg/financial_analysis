@@ -1,8 +1,12 @@
 import './App.css'
+import TickerList from './Services/tickerService'
 
 function App() {
   return (
-    <h1>hello world</h1>
+    <div>
+      <h1> Ticker List</h1>
+      <TickerList/>
+    </div>
   )
 }
 
