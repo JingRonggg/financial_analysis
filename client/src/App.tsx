@@ -1,6 +1,6 @@
 import './App.css'
-import Dashboard from './Components/dashboard'
-import Home from './Pages/HomePage/Home'
+import Dashboard from './components/Dashboard'
+import Home from './pages/home/Home'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {

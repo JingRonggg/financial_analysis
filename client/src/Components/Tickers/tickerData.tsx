@@ -1,4 +1,4 @@
-import { getTickerData } from "../../Services/tickerService"
+import { getTickerData } from "../../services/ticker-service"
 import { useState, useEffect } from 'react'
 
 type TickerEntry = {

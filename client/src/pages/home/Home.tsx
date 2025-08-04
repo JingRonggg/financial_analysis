@@ -1,5 +1,5 @@
-import SearchBar from "../../Components/SearchBar/searchBar";
-import React, { useState } from "react";
+import SearchBar from "../../components/SearchBar/SearchBar";
+import { useState } from "react";
 import '../../Styles/home.css'
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className={`container ${isFocused ? "darken" : ""}`}>
         <div className="content">
-            <h1>Baby Bluee</h1>
+            <h1>Financial Analysis</h1>
             <SearchBar placeHolder="Search tickers here..." 
               onFocus={() => setFocus(true)}
               onBlur={()=> setFocus(false)}

@@ -11,7 +11,7 @@ import {
   BarElement,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import type { TickerData } from '../../types/TickerData';
+import type { TickerData } from '../../types/ticker-data';
 
 ChartJS.register(
   CategoryScale,

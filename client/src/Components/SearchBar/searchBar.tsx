@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import '../../Styles/searchBar.css'
-import { useTicker } from '../Tickers/tickerList';
+import { useTicker } from '../Tickers/TickerList';
 import { Link, useNavigate } from 'react-router-dom';
 
 type searchBarProps = {

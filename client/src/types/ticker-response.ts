@@ -1,4 +1,4 @@
-import type { TickerData } from "./TickerData";
+import type { TickerData } from "./ticker-data";
 
 export interface TickerResponse {
 	ticker_symbol: string;

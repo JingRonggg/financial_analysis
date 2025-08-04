@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getTickers } from '../../Services/tickerService'
+import { getTickers } from '../../services/ticker-service'
 
 export function useTicker() {
     const [ tickers , setTickers ] = useState<string[]>([]);
