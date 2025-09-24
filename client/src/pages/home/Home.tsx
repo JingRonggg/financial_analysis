@@ -1,6 +1,6 @@
-import SearchBar from "../../components/SearchBar/SearchBar";
 import { useState } from "react";
 import '../../Styles/home.css'
+import SearchBar from "../../Components/SearchBar/searchBar";
 
 export default function Home() {
   const [isFocused, setFocus ] = useState<boolean>(false);

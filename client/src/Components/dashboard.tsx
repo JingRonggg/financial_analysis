@@ -1,9 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import TickerChart from './Charts/TickerChart';
-import Widget from './Widget/Widget';
 import { useTicker } from '../hooks/use-ticker';
 import '../Styles/dashboard.css';
+import Widget from './Widget/widget';
+import TickerChart from './Charts/TickerChart';
 
 const Dashboard: React.FC = () => {
   const { ticker } = useParams<{ ticker: string }>();
